@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oreolder", "Oreolder\Oreolder.csproj", "{D179CFD0-C469-4CE8-A72C-DFE2DB452B68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oreolder.Desktop", "Oreolder.Desktop\Oreolder.Desktop.csproj", "{59266501-5B64-4AAA-8F23-8F4059A3D7B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D179CFD0-C469-4CE8-A72C-DFE2DB452B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D179CFD0-C469-4CE8-A72C-DFE2DB452B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D179CFD0-C469-4CE8-A72C-DFE2DB452B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59266501-5B64-4AAA-8F23-8F4059A3D7B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59266501-5B64-4AAA-8F23-8F4059A3D7B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59266501-5B64-4AAA-8F23-8F4059A3D7B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59266501-5B64-4AAA-8F23-8F4059A3D7B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
