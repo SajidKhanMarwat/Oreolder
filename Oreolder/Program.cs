@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Owin.Security.OAuth;
+
+using Oreolder.Models;
+
 namespace Oreolder
 {
     public class Program
@@ -9,6 +14,20 @@ namespace Oreolder
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<OreolderContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("OreolderConnectionString")));
+
+
+            var oAuthOptions = new OAuthAuthorizationServerOptions
+            {
+                AllowInsecureHttp = true,
+                //TokenEndpointPath = new PathString("/token"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(10),
+                //Provider = new SimpleAuthorizationServerProvider(),
+                //RefreshTokenProvider = new SimpleRefreshTokenProvider();
+            };
+
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -19,11 +38,12 @@ namespace Oreolder
                 app.UseHsts();
             }
 
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
